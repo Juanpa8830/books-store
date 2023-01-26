@@ -1,0 +1,22 @@
+.nav {
+  display: flex;
+  border: 2px solid rgb(177, 172, 172);
+}
+
+.navleft {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 5%;
+}
+
+.navlist {
+  display: flex;
+  gap: 20%;
+  list-style: none;
+}
+
+.listLink {
+  text-decoration: none;
+  color: black;
+}
