@@ -95,7 +95,7 @@ Clone this repository to your desired folder:
 
 Install this project with:
 ```sh
-  cd math magicians
+  cd Books-store
   npm install
 ```
 
