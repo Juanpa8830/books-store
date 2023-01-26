@@ -108,9 +108,9 @@ To build the project, execute the following command:
 
 ### Run
 
-To run tests, run the following command:
+To run the application, type the following command:
 
-  npm test
+  npm start
 
 
 ### Deployment
