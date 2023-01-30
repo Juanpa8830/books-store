@@ -1,6 +1,8 @@
+const CHECK_STATUS = 'BOOK-STORE/books/CHECK_STATUS';
+
 const categoriesReducer = (state = [], action) => {
   switch (action.type) {
-    case 'CHECK_STATUS':
+    case CHECK_STATUS:
       return [
         action.payload,
       ];
@@ -11,7 +13,7 @@ const categoriesReducer = (state = [], action) => {
 
 export const checkStatus = (data) => (
   {
-    type: 'CHECK_STATUS',
+    type: CHECK_STATUS,
     payload: data,
   }
 );
