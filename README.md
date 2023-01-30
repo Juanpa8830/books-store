@@ -54,6 +54,7 @@
     <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">Javascript</a></li>
     <li><a href="https://webpack.js.org/" target="_blank" rel="noopener noreferrer">WebPack</a></li>
     <li><a href="https://es.reactjs.org/" target="_blank" rel="noopener noreferrer">React</a></li>
+    <li><a href="https://es.redux.js.org/" target="_blank" rel="noopener noreferrer">Redux</li>
   </ul>
 
 

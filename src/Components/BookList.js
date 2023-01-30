@@ -1,52 +1,33 @@
 import React from 'react';
+import { useSelector } from 'react-redux'; // se usa para acceder al estado en el store
 import BookItem from './Book';
 
-const BooksInfo = [
-  {
-    id: 0,
-    category: 'Action',
-    title: 'The Hunger Games',
-    author: 'Suzanne Collins',
-    chapters: 25,
-    currentChapter: 16,
-  },
-  {
-    id: 1,
-    category: 'Science Fiction',
-    title: 'Dune',
-    author: 'Frank Herbert',
-    chapters: 25,
-    currentChapter: 2,
-  },
-  {
-    id: 2,
-    category: 'Economy',
-    title: 'Capital in the Twenty-First century',
-    author: 'Suzanne Collins',
-    chapters: 30,
-    currentChapter: 13,
-  }];
+const BookList = () => {
+  // tomo el reducer book del state en el root reducer
+  const books = useSelector((state) => state.book);
 
-const BookList = () => (
+  return (
+    <ul>
+      {books.map((book) => {
+        const {
+          id, category, title, author, chapters, currentChapter,
+        } = book;
 
-  <ul>
-    {BooksInfo.map((book) => {
-      const {
-        id, category, title, author, chapters, currentChapter,
-      } = book;
-      return (
+        return (
 
-        <BookItem
-          key={id}
-          category={category}
-          title={title}
-          author={author}
-          chapters={chapters}
-          currentChapter={currentChapter}
-        />
-      );
-    })}
-  </ul>
-);
+          <BookItem
+            key={id}
+            id={id}
+            category={category}
+            title={title}
+            author={author}
+            chapters={chapters}
+            currentChapter={currentChapter}
+          />
+        );
+      })}
+    </ul>
+  );
+};
 
 export default BookList;
