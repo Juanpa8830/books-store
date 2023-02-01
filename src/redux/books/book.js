@@ -1,56 +1,41 @@
-const initialState = [{
-  id: 0,
-  category: 'Action',
-  title: 'The Hunger Games',
-  author: 'Suzanne Collins',
-  chapters: 25,
-  currentChapter: 16,
-},
-{
-  id: 1,
-  category: 'Science Fiction',
-  title: 'Dune',
-  author: 'Frank Herbert',
-  chapters: 25,
-  currentChapter: 2,
-},
-{
-  id: 2,
-  category: 'Economy',
-  title: 'Capital in the Twenty-First century',
-  author: 'Suzanne Collins',
-  chapters: 30,
-  currentChapter: 13,
-}];
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
-const ADD_BOOK = 'BOOK-STORE/books/ADD_BOOK';
-const REMOVE_BOOK = 'BOOK-STORE/books/REMOVE_BOOK';
+const ApiBaseUrlGet = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/KaY5H84dyT1ZWK4UIq4O/books';
+const ApiBaseUrlPost = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/KaY5H84dyT1ZWK4UIq4O/books';
+const ApiBaseUrlDelete = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/KaY5H84dyT1ZWK4UIq4O/books/';
+const ADD_API_BOOK = 'BOOK-STORE/books/ADD_API_BOOK';
+const REMOVE_API_BOOK = 'BOOK-STORE/books/REMOVE_API_BOOK';
+const GET_INFO = 'BOOK-STORE/books/GET_INFO';
 
-const bookReducer = (state = initialState, action) => {
+const bookReducer = (state = [], action) => {
   switch (action.type) {
-    case ADD_BOOK:
-      return [
-        ...state, action.payload,
-      ];
-    case REMOVE_BOOK:
+    case `${ADD_API_BOOK}/fulfilled`:
+      return [...state, action.payload];
+    case `${REMOVE_API_BOOK}/fulfilled`:
       return state.filter((book) => book.id !== action.payload);
+    case `${GET_INFO}/fulfilled`:
+      return action.payload;
     default:
       return state;
   }
 };
+export const getApiBooks = createAsyncThunk(GET_INFO,
+  async () => axios.get(ApiBaseUrlGet).then((response) => {
+    const listObj = Object.keys(response.data).map((key) => (
+      {
+        id: key, ...response.data[key][0],
+      }
+    ));
+    return listObj;
+  }));
 
-export const AddBook = (book) => ({
+export const AddApiBook = createAsyncThunk(ADD_API_BOOK,
+  async (book) => axios.post(ApiBaseUrlPost, book)
+    .then(() => book));
 
-  type: ADD_BOOK,
-  payload: book,
-
-});
-
-export const removeBook = (id) => ({
-
-  type: REMOVE_BOOK,
-  payload: id,
-
-});
+export const removeApiBook = createAsyncThunk(REMOVE_API_BOOK,
+  async (id) => axios.delete(ApiBaseUrlDelete + id, id)
+    .then(() => id));
 
 export default bookReducer;
