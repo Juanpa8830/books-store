@@ -10,7 +10,7 @@ const BookList = () => {
     <ul>
       {books.map((book) => {
         const {
-          id, category, title, author, chapters, currentChapter,
+          id, category, title, author,
         } = book;
 
         return (
@@ -21,8 +21,6 @@ const BookList = () => {
             category={category}
             title={title}
             author={author}
-            chapters={chapters}
-            currentChapter={currentChapter}
           />
         );
       })}
