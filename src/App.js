@@ -1,10 +1,15 @@
 import React from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { getApiBooks } from './redux/books/book';
 import Categories from './Pages/Categories';
 import BooksPage from './Pages/BooksPage';
 import './App.css';
 
 export default function App() {
+  const dispatch = useDispatch();
+  dispatch(getApiBooks());
+
   return (
 
     <>

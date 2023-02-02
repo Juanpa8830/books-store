@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
-import { AddBook } from '../redux/books/book';
+import { AddApiBook } from '../redux/books/book';
 
 const BookInput = () => {
   const dispatch = useDispatch();
@@ -17,9 +17,9 @@ const BookInput = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(AddBook({
+    dispatch(AddApiBook({
       ...bookData,
-      id: uuidv4(),
+      item_id: uuidv4(),
       category: 'science-fiction',
     }));
     setbookData({ title: '', author: '' });
