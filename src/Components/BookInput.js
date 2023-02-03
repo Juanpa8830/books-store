@@ -26,9 +26,11 @@ const BookInput = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className="containerform">
+      <h2 className="formtitle">ADD NEW BOOK</h2>
+      <form className="form" id="flex" onSubmit={handleSubmit}>
         <input
+          className="titleinput"
           onChange={onChange}
           type="text"
           placeholder="Book title"
@@ -38,6 +40,7 @@ const BookInput = () => {
         />
 
         <input
+          className="authorinput"
           onChange={onChange}
           type="text"
           placeholder="Author"

@@ -7,24 +7,26 @@ const BookList = () => {
   const books = useSelector((state) => state.book);
 
   return (
-    <ul>
-      {books.map((book) => {
-        const {
-          id, category, title, author,
-        } = book;
+    <div className="container">
+      <ul className="booklist" id="flex">
+        {books.map((book) => {
+          const {
+            id, category, title, author,
+          } = book;
 
-        return (
+          return (
 
-          <BookItem
-            key={id}
-            id={id}
-            category={category}
-            title={title}
-            author={author}
-          />
-        );
-      })}
-    </ul>
+            <BookItem
+              key={id}
+              id={id}
+              category={category}
+              title={title}
+              author={author}
+            />
+          );
+        })}
+      </ul>
+    </div>
   );
 };
 

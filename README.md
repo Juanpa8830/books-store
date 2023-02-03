@@ -38,7 +38,7 @@
 *[Math Magicians]* a WebApp that shows two pages: Books and Categories. here, users can find a list of books they have added and check the reading status. They can also delete the ones they already finished.
 <div align="center">
 
-  <img src="./src/images/screenshot.png" alt="bookstore" width="750"  height="auto" />
+  <img src="./src/images/BSscreenshot.png" alt="bookstore" width="750"  height="auto" />
 
   <br/>
 
@@ -70,7 +70,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- <a href="" target="_blank" rel="noopener noreferrer">Math magicians - Live Demo</a>
+- <a href="https://books-store-8hzd.onrender.com" target="_blank" rel="noopener noreferrer">Books-store - Live Demo</a>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -89,7 +89,7 @@ In order to run this project you need `git` locally installed. Please got to [Ge
 Clone this repository to your desired folder:
 ```sh
   cd my-folder
-  git clone git@github.com:juanpa8830/React-Math-magicians.git
+  git clone git@github.com:juanpa8830/Books-store.git
 ```
 
 ### Install
