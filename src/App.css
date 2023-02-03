@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap');
 
-
 .nav {
   padding: 24px 4%;
   background-color: #fff;
@@ -72,34 +71,34 @@
 }
 
 .bcontent {
-display: flex;
-justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .bleftinfo {
-  font-family: "Roboto Slab",serif;
+  font-family: "Roboto Slab", serif;
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
 .bcat {
-font-family: "Montserrat",sans-serif;
-font-size: .875rem;
-opacity: .5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  opacity: 0.5;
 }
 
 .btitle {
   margin-top: 0.188rem;
   font-size: 1.375rem;
-  letter-spacing: -.2px;
+  letter-spacing: -0.2px;
   font-weight: 700;
   color: #121212;
 }
 
 .bauthor {
-  font-family: "Roboto Slab",serif;
-  font-size: .875rem;
+  font-family: "Roboto Slab", serif;
+  font-size: 0.875rem;
   font-weight: 300;
   color: #4386bf;
 }
@@ -107,24 +106,27 @@ opacity: .5;
 .cre-options {
   display: flex;
   align-items: center;
-  margin-top: 1.313rem; 
+  margin-top: 1.313rem;
 }
 
 .Vdivision {
-width: 0.125rem;
-height: 1.5rem;
-background-color: #e8e8e8;
-margin: 0 1rem;
+  width: 0.125rem;
+  height: 1.5rem;
+  background-color: #e8e8e8;
+  margin: 0 1rem;
 }
-.bcomments, .bremove, .bedit {
-  font-family: "Roboto Slab",serif;
+
+.bcomments,
+.bremove,
+.bedit {
+  font-family: "Roboto Slab", serif;
   background-color: transparent;
   border: none;
   color: #4386bf;
-  font-size: .875rem;
+  font-size: 0.875rem;
   font-weight: 300;
   align-items: center;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .progress-package {
@@ -135,12 +137,12 @@ margin: 0 1rem;
 }
 
 .circular-package {
-width: 5.625rem;
-height: 5.625rem;
-padding: 0.63rem 0.625rem 0.75rem 0.75rem;
-display: flex;
-justify-content: center;
-align-items: center;
+  width: 5.625rem;
+  height: 5.625rem;
+  padding: 0.63rem 0.625rem 0.75rem 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .circle {
@@ -155,19 +157,19 @@ align-items: center;
 }
 
 .status-info {
-  
   padding-left: 10px;
 }
+
 .percent {
-  font-family: "Montserrat",sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #121212;
   font-size: 2rem;
 }
 
 .completed {
-  font-size: .875rem;
-  opacity: .5;
-  font-family: "Montserrat",sans-serif;
+  font-size: 0.875rem;
+  opacity: 0.5;
+  font-family: "Montserrat", sans-serif;
   color: #121212;
 }
 
@@ -187,20 +189,20 @@ align-items: center;
 }
 
 .cc {
-font-family: "Roboto Slab",serif;
-font-weight: 300;
-color: #121212;
-font-size: .813rem;
-opacity: .5;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  color: #121212;
+  font-size: 0.813rem;
+  opacity: 0.5;
 }
 
 .chapternumber {
-margin-top: 0.438rem;
-font-size: 1rem;
-letter-spacing: -.4px;
-font-family: "Roboto Slab",serif;
-font-weight: 300;
-color: #121212;
+  margin-top: 0.438rem;
+  font-size: 1rem;
+  letter-spacing: -0.4px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  color: #121212;
 }
 
 .Updateb {
@@ -209,14 +211,11 @@ color: #121212;
   background-color: #0290ff;
   border-radius: 3px;
   padding: 8px 24px;
-  font-family: "Roboto Slab",serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 300;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   color: #fff;
 }
-
-
-
 
 .division {
   margin-left: 4%;
