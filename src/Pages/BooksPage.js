@@ -4,7 +4,7 @@ import BookInput from '../Components/BookInput';
 const BooksPage = () => (
   <div>
     <Booklist />
-    <hr />
+    <hr className="division" />
     <BookInput />
   </div>
 
