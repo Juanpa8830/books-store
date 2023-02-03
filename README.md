@@ -38,7 +38,7 @@
 *[Math Magicians]* a WebApp that shows two pages: Books and Categories. here, users can find a list of books they have added and check the reading status. They can also delete the ones they already finished.
 <div align="center">
 
-  <img src="./src/images/screenshot.png" alt="bookstore" width="750"  height="auto" />
+  <img src="./src/images/BSscreenshot.png" alt="bookstore" width="750"  height="auto" />
 
   <br/>
 
