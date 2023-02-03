@@ -13,9 +13,9 @@ export default function App() {
   return (
 
     <div className="root">
-      <nav className="nav">
+      <nav className="nav" id="flex">
         <h1 className="navtitle">Bookstore CMS</h1>
-        <ul className="navlist">
+        <ul className="navlist" id="flex">
           <li className="listItem"><Link className="listLink1" to="/">BOOKS</Link></li>
           <li className="listItem"><Link className="listLink2" to="/Pages/Categories">CATEGORIES</Link></li>
         </ul>

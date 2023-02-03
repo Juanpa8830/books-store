@@ -17,12 +17,12 @@ const BookItem = (props) => {
 
     <li>
       <div className="book">
-        <div className="bcontent">
-          <div className="bleftinfo">
+        <div className="bcontent" id="flex">
+          <div className="bleftinfo" id="flex">
             <h4 className="bcat">{category}</h4>
             <h2 className="btitle">{title}</h2>
             <h3 className="bauthor">{author}</h3>
-            <div className="cre-options">
+            <div className="cre-options" id="flex">
               <button className="bcomments" type="button">Comments</button>
               <div className="Vdivision" />
               <button className="bremove" onClick={onClick} type="button">Remove</button>
@@ -30,8 +30,8 @@ const BookItem = (props) => {
               <button className="bedit" type="button">Edit</button>
             </div>
           </div>
-          <div className="progress-package">
-            <div className="circular-package">
+          <div className="progress-package" id="flex">
+            <div className="circular-package" id="flex">
               <div className="circle" />
             </div>
             <div className="status-info">
@@ -39,7 +39,7 @@ const BookItem = (props) => {
               <p className="completed">Completed</p>
             </div>
             <div className="vert-div" />
-            <div className="chapter-package">
+            <div className="chapter-package" id="flex">
               <div>
                 <p className="cc">CURRENT CHAPTER</p>
                 <p className="chapternumber">Chapter 14</p>
